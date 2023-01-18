@@ -51,7 +51,7 @@ let feelings = [
 
 function addCountry(selectedCountry) {
   options.innerHTML = "";
-  feelings.forEach((country) => {
+  feelings.forEach((feelings) => {
     let isSelected = country == selectedCountry ? "selected" : "";
     let li = `<li onclick="updateName(this)" class="${isSelected}">${country}</li>`;
     options.insertAdjacentHTML("beforeend", li);
@@ -69,7 +69,7 @@ function updateName(selectedLi) {
 searchInp.addEventListener("keyup", () => {
   let arr = [];
   let searchWord = searchInp.value.toLowerCase();
-  arr = countries
+  arr = feelings
     .filter((data) => {
       return data.toLowerCase().startsWith(searchWord);
     })
