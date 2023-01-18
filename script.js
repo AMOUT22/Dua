@@ -51,7 +51,7 @@ let feelings = [
 
 function addCountry(selectedCountry) {
   options.innerHTML = "";
-  feelings.forEach((feelings) => {
+  feelings.forEach((country) => {
     let isSelected = country == selectedCountry ? "selected" : "";
     let li = `<li onclick="updateName(this)" class="${isSelected}">${country}</li>`;
     options.insertAdjacentHTML("beforeend", li);
